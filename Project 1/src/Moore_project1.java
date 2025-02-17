@@ -122,16 +122,68 @@ public class Moore_project1 {
 	public static String getMostFrequentFoodItem(String[] list)
 	{
 		String mostFrequent = "";
+		int currentCounter = 0;
+		int finalCounter = 0;
 		//loop through the list
-		//check for 
+		//initialize currentCounter and finalCounter
+		//loop through the list for each entry in the list
+		//if the entries are equal to each other and not at the same index, add one to currentCounter
+		//if currentCounter is larger than finalCounter, set finalCounter to currentCounter and set mostFrequent
+		// to string at index i
+		for (int i = 0; i < list.length; i++) 
+		{
+			currentCounter = 0;
+			for (int j = 0; j < list.length; j++) 
+			{
+
+				if (list[i].equalsIgnoreCase(list[j]) && i != j)
+				{
+					currentCounter++;
+				}
+			}
+			if(currentCounter >= finalCounter)
+			{
+				mostFrequent = list[i];
+				finalCounter = currentCounter;
+			}
+		}
 		
 		return mostFrequent;
-	} //not done
+	}
 	
 	public static String getLeastFrequentFoodItem(String[] list)
 	{
-		//TODO: complete method
-		return null;
+		String leastFrequent = "";
+		int currentCounter = 0;
+		int finalCounter = 0;
+		//nested loop through the list to compare each item to each other item
+		//if the entries are equal to each other, increase current counter by 1
+		// 
+		for (int i = 0; i < list.length; i++) 
+		{
+			currentCounter = 0;
+			for (int j = 0; j < list.length; j++) 
+			{
+
+				if (list[i].equalsIgnoreCase(list[j]) && i != j)
+				{
+					currentCounter++;
+				}
+			}
+			if(currentCounter >= finalCounter)
+			{
+
+				finalCounter = currentCounter;
+			}
+			if(currentCounter < finalCounter)
+			{
+				leastFrequent = list[i];
+				break;
+			}
+		}
+		
+		
+		return leastFrequent;
 	} //not done
 	
 	public static int countMustardsInList(String[] list)
@@ -228,6 +280,22 @@ public class Moore_project1 {
 				}
 				printMenu();
 				choice = scn.nextInt();
+			}
+			else if (choice == 6)
+			{
+				
+				System.out.println(getMostFrequentFoodItem(foodItems).toLowerCase());
+				printMenu();
+				choice = scn.nextInt();
+				
+			}
+			else if (choice == 7)
+			{
+				
+				System.out.println(getLeastFrequentFoodItem(foodItems).toLowerCase());
+				printMenu();
+				choice = scn.nextInt();
+				
 			}
 			else if (choice == 9)
 			{
