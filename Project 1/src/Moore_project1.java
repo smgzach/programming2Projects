@@ -101,11 +101,16 @@ public class Moore_project1 {
 			}
 			
 		}
-
+		
+		for (int i = 0; i < nonUniqueItems.size(); i++) 
+		{
+			nonUniqueItems.set(i, nonUniqueItems.get(i).toLowerCase());
+		}
+		
 		ArrayList<String> finalNonUniqueItems = new ArrayList<String>();
 		for (int i = 0; i < nonUniqueItems.size(); i++)
 		{
-			if(!finalNonUniqueItems.contains(nonUniqueItems.get(i).toLowerCase()) && )
+			if(!finalNonUniqueItems.contains(nonUniqueItems.get(i)))
 			{
 				finalNonUniqueItems.add(nonUniqueItems.get(i));
 			}
