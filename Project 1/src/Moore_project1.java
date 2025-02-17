@@ -101,14 +101,16 @@ public class Moore_project1 {
 			}
 			
 		}
+		
 		ArrayList<String> finalNonUniqueItems = new ArrayList<String>();
 		for (int i = 0; i < nonUniqueItems.size(); i++)
 		{
-			if(!finalNonUniqueItems.contains(nonUniqueItems.get(i).toLowerCase()))
+			if(!finalNonUniqueItems.contains(nonUniqueItems.get(i).toLowerCase()) && )
 			{
 				finalNonUniqueItems.add(nonUniqueItems.get(i));
 			}
 		}
+
 		return finalNonUniqueItems;
 	}
 	
@@ -217,7 +219,7 @@ public class Moore_project1 {
 				ArrayList<String> nonUniqueFoodItems = getNonUniqueFoodItems(foodItems);
 				for (int i = 0; i < nonUniqueFoodItems.size(); i++) 
 				{
-					System.out.println(nonUniqueFoodItems.get(i).toLowerCase());
+					System.out.println(nonUniqueFoodItems.get(i));
 				}
 				printMenu();
 				choice = scn.nextInt();
