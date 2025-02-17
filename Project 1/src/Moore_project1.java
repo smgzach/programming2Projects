@@ -26,7 +26,7 @@ public class Moore_project1 {
 		}
 		return counter;
 	}
-	hii
+	
 	public static ArrayList<String> getOneWordFoodItems(String[] list)
 	{
 		ArrayList<String> oneWordItems = new ArrayList<String>();
