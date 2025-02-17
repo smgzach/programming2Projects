@@ -211,7 +211,7 @@ public class Moore_project1 {
 			if(currentCounter < finalCounter)
 			{
 				leastFrequent = list[i];
-				break;
+
 			}
 		}
 		
