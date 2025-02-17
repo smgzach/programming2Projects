@@ -222,17 +222,27 @@ public class Moore_project1 {
 	/**
 	 * 
 	 * @param an array of Strings containing food items separated by ", "
-	 * @return
+	 * @return an integer describing the number of items in the l
 	 */
 	public static int countMustardsInList(String[] list)
 	{
-		int mustards = 0;
-		for (int i = 0; i < list.length; i++) 
+		String[] specialList = list.clone();
+		int counter = 0;
+		for (int i = 0; i < specialList.length; i++) 
 		{
-			
+			specialList[i] = specialList[i].toLowerCase();
 		}
-		return 0;
-	} //not done
+		
+		for (int i = 0; i < specialList.length; i++) 
+		{
+			if (specialList[i].contains("mustard"))
+			{
+				counter++;
+				System.out.println(specialList[i]);
+			}
+		}
+		return counter;
+	} //ask about this
 	
 	/**
 	 * 
@@ -339,6 +349,12 @@ public class Moore_project1 {
 				printMenu();
 				choice = scn.nextInt();
 				
+			}
+			else if (choice == 8)
+			{
+				countMustardsInList(foodItems);
+				printMenu();
+				choice = scn.nextInt();
 			}
 			else if (choice == 9)
 			{
