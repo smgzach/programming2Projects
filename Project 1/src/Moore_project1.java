@@ -69,7 +69,7 @@ public class Moore_project1 {
 
 				if(list[i].equalsIgnoreCase(list[j]) && i != j)
 				{
-					j = 0;
+					
 					isUnique = false;
 					break;
 					
@@ -94,14 +94,22 @@ public class Moore_project1 {
 			{
 				if(list[i].equalsIgnoreCase(list[j]) && i != j)
 				{
-					j = 0;
+
 					nonUniqueItems.add(list[i]);
 					break;
 				}
 			}
 			
 		}
-		return nonUniqueItems;
+		ArrayList<String> finalNonUniqueItems = new ArrayList<String>();
+		for (int i = 0; i < nonUniqueItems.size(); i++)
+		{
+			if(!finalNonUniqueItems.contains(nonUniqueItems.get(i).toLowerCase()))
+			{
+				finalNonUniqueItems.add(nonUniqueItems.get(i));
+			}
+		}
+		return finalNonUniqueItems;
 	}
 	
 	public static String getMostFrequentFoodItem(String[] list)
