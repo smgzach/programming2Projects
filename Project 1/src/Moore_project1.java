@@ -101,7 +101,7 @@ public class Moore_project1 {
 			}
 			
 		}
-		
+
 		ArrayList<String> finalNonUniqueItems = new ArrayList<String>();
 		for (int i = 0; i < nonUniqueItems.size(); i++)
 		{
