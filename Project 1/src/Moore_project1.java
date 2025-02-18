@@ -235,14 +235,14 @@ public class Moore_project1 {
 		
 		for (int i = 0; i < specialList.length; i++) 
 		{
-			if (specialList[i].contains("mustard"))
+			if (specialList[i].contains("mustard") && !specialList[i].equals("mustard"))
 			{
 				counter++;
 				System.out.println(specialList[i]);
 			}
 		}
 		return counter;
-	} //ask about this
+	} //should be done but double confirm
 	
 	/**
 	 * 
