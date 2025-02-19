@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class Moore_project1 {
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return an int describing the number of times the word "candy" appeared in the array
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return counter, an int describing the number of times the word "candy" appeared in the array
 	 */
 	public static int countCandy(String[] list) 
 	{
@@ -32,8 +32,8 @@ public class Moore_project1 {
 	}
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return an ArrayList of Strings containing the number of one word items in the array
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return oneWordItems, an ArrayList of Strings containing the number of one word items in the array
 	 */
 	public static ArrayList<String> getOneWordFoodItems(String[] list)
 	{
@@ -52,8 +52,8 @@ public class Moore_project1 {
 	
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return an ArrayList of Strings containing the number of multi word items in the array
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return multiWordItems, an ArrayList of Strings containing the number of multi word items in the array
 	 */
 	public static ArrayList<String> getMultiWordFoodItems(String[] list)
 	{
@@ -72,8 +72,8 @@ public class Moore_project1 {
 	
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return an ArrayList of Strings containing the items that appear only once in the array
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return uniqueItems, an ArrayList of Strings containing the items that appear only once in the array
 	 */
 	public static ArrayList<String> getUniqueFoodItems(String[] list)
 	{
@@ -105,8 +105,8 @@ public class Moore_project1 {
 	
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return an ArrayList of Strings containing the items that appear multiple times in the array
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return finalNonUniqueItems, an ArrayList of Strings containing the items that appear multiple times in the array
 	 */
 	public static ArrayList<String> getNonUniqueFoodItems(String[] list)
 	{
@@ -144,8 +144,8 @@ public class Moore_project1 {
 	
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return a String describing the item that appears most frequently in the array
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return mostFrequent, a String describing the item that appears most frequently in the array
 	 */
 	public static String getMostFrequentFoodItem(String[] list)
 	{
@@ -181,8 +181,8 @@ public class Moore_project1 {
 	
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return a String describing the item that appears the least frequently in the array
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return leastFrequent, a String describing the item that appears the least frequently in the array
 	 */
 	public static String getLeastFrequentFoodItem(String[] list)
 	{
@@ -221,8 +221,8 @@ public class Moore_project1 {
 	
 	/**
 	 * 
-	 * @param an array of Strings containing food items separated by ", "
-	 * @return an integer describing the number of items in the l
+	 * @param list, an array of Strings containing food items separated by ", "
+	 * @return counter, an integer describing the number of times "mustard" joined with another word appears in the array
 	 */
 	public static int countMustardsInList(String[] list)
 	{
@@ -246,8 +246,8 @@ public class Moore_project1 {
 	
 	/**
 	 * 
-	 * @param a new Scanner object
-	 * @return an array of Strings separated by ", " that was inputed by the user
+	 * @param scn, a new Scanner object
+	 * @return listFinished, an array of Strings separated by ", " that was inputed by the user
 	 */
 	public static String[] getNewList(Scanner scn)
 	{
@@ -276,7 +276,7 @@ public class Moore_project1 {
 	}
 	
 	public static void main(String[] args) {
-		//TODO: complete method
+
 		Scanner scn = new Scanner(System.in);
 		System.out.print("Enter list of food items: ");
 		String foodItems[] = getNewList(scn);
