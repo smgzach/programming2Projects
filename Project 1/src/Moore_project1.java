@@ -11,25 +11,32 @@ public class Moore_project1 {
 	 * 
 	 * @param list, an array of Strings containing food items separated by ", "
 	 * @return counter, an int describing the number of times the word "candy" appeared in the array
+	 * 		   regardless of case
 	 */
 	public static int countCandy(String[] list) 
 	{
-		String[] specialList = list.clone();
-		int counter = 0;
-		for (int i = 0; i < specialList.length; i++) 
+		String[] specialList = list.clone(); /*clones "list" into a new array so that the
+												passed in array will not be modified*/
+		
+		int counter = 0; //initializes counter variable to keep track of number of "candy" in array
+		
+		for (int i = 0; i < specialList.length; i++) /*converts all items in "specialList" to lowercase
+													 to prepare for search */
 		{
 			specialList[i] = specialList[i].toLowerCase();
 		}
 		
-		for (int i = 0; i < specialList.length; i++) 
+		for (int i = 0; i < specialList.length; i++) /* iterates through "specialList",
+													if an item contains "candy", increase "counter" by 1 */
 		{
 			if (specialList[i].contains("candy"))
 			{
 				counter++;
 			}
 		}
-		return counter;
+		return counter; //final "counter" variable contains number of times "candy" appeared in array regardless of case
 	}
+	
 	/**
 	 * 
 	 * @param list, an array of Strings containing food items separated by ", "
