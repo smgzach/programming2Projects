@@ -210,15 +210,20 @@ public class Moore_project1 {
 					currentCounter++;
 				}
 			}
-			if(currentCounter >= finalCounter)
+			if(currentCounter > finalCounter)
 			{
 
 				finalCounter = currentCounter;
 			}
-			if(currentCounter < finalCounter)
+			if(currentCounter < finalCounter && currentCounter != 0)
 			{
 				leastFrequent = list[i];
 
+			}
+			if(currentCounter == 0)
+			{
+				leastFrequent = list[i];
+				break;
 			}
 		}
 		
