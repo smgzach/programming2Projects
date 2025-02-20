@@ -229,7 +229,7 @@ public class Moore_project1 {
 		
 		
 		return leastFrequent;
-	} //not done
+	} //not done (start at the end instead)
 	
 	/**
 	 * 
