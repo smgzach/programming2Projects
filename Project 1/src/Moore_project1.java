@@ -215,18 +215,13 @@ public class Moore_project1 {
 
 				finalCounter = currentCounter;
 			}
-			if(currentCounter < finalCounter && currentCounter != 0)
+			if(currentCounter < finalCounter)
 			{
 				leastFrequent = list[i];
 
 			}
-			if(currentCounter == 0)
-			{
-				leastFrequent = list[i];
-				break;
-			}
+
 		}
-		
 		
 		return leastFrequent;
 	} //not done (start at the end instead)
